@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height:100%;
+}
+
+.fullpage {
+    margin: auto 18vw;
+    height: 100vh;
+    /*border: 2px solid gray;*/
+}
+
+.navbar {
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(248, 247, 247);
+    /*border: 2px solid red;*/
+}
+
+.navbar a {
+    float: right;
+    padding-top: 10px;
+    padding-left: 7px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(77, 77, 77);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#logo {
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(179, 4, 85);
+}
+
+#logo img {
+    height: 60px;
+    width: 80px;
+    padding-left: 9px;
+}
+
+.mar {
+    margin-top: 18px;
+}
+
+h3 {
+    margin-top: 50px;
+}
+
+.main-gallery {
+    /*border: 2px solid pink;*/
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas: 
+    "h3 h3 h3 h3"
+    "img1 img1 img2 img2"
+    "img3 img4 img4 img5"
+    "img6 img7 img8 img9";
+}
+
+.main-gallery h3 {
+    color: rgb(44, 44, 44);
+    font-family: Arial, Helvetica, sans-serif;
+    grid-area: h3;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 275px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-img div {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.781);
+    text-align: center;
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+
+.gallery-img a  {
+    text-decoration: none;
+    margin: auto;
+    color : white;
+}
+
+.gallery-img:hover div {
+    display: flex;
+    transition: all ease-in-out 50ms;
+}
+
+.img1 {
+    grid-area: img1;
+    background-image: url("./img/thumbs/img1.png");
+}
+.img2 {
+    grid-area: img2;
+    background-image: url("./img/thumbs/img2.png");
+}
+.img3 {
+    grid-area: img3;
+    background-image: url("./img/thumbs/img3.png");
+}
+.img4 {
+    grid-area: img4;
+    background-image: url("./img/thumbs/img4.png");
+}
+.img5 {
+    grid-area: img5;
+    background-image: url("./img/thumbs/img5.png");
+}
+.img6 {
+    grid-area: img6;
+    background-image: url("./img/thumbs/img6.png");
+}
+.img7 {
+    grid-area: img7;
+    background-image: url("./img/thumbs/img7.png");
+}
+.img8 {
+    grid-area: img8;
+    background-image: url("./img/thumbs/img8.png");
+}
+.img9 {
+    grid-area: img9;
+    background-image: url("./img/thumbs/img9.png");
+}
+
+/*pop-up window when clicked on image  */
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.img-window img {
+    max-width: 70vw;
+    max-height: 70vw;
+    margin: auto;
+}
+
+/* buttons */ 
+.img-next-btn {
+    display: block;
+    padding: 5px;
+    border-radius : 4px;
+    background-color: rgb(27, 39, 65);
+    position: fixed;
+    top: 50vh;
+    z-index: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.img-next-btn:hover {
+    background-color: black;
+}
+
+.img-prev-btn {
+    display: block;
+    padding: 10px;
+    border-radius : 4px;
+    background-color: rgb(27, 39, 65);
+    position: fixed;
+    top: 50vh;
+    z-index: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.img-prev-btn:hover {
+    background-color: black;
+}
+
+/*navbar content */
+.about {
+    margin-top: 30px;
+    padding: 10px 0 0 5px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact {
+    margin-top: 30px;
+    padding: 10px 0 0 5px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+hr {
+    border-top: 2px solid whitesmoke;
+}
+
+h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:brown;
+}
